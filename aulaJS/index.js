@@ -1,56 +1,86 @@
-//Criar programa que calcula a média
-//das notas entre alunos e envia
-// mensagem de cálculo da média
-
-// delcaração de variavéis com nome dos alunos
-//variavéis contendo a nota dos alunos
-
-const alunosDaTurmaA = [
+const classA = [
     {
-        nome:'Kaline',
-        nota: 9.8
+        name: 'Kaline',
+        grade: 9.8
     },
 
     {
-        nome:'Caio',
-        nota: 10
+        name: 'Caio',
+        grade: 10
     },
 
     {
-        nome:'kiki',
-        nota: 2
-    }    
+        name: 'kiki',
+        grade: 2
+    }
 ]
 
-const alunosDaTurmaB = [
+const classB = [
     {
-        nome:'Lucky',
-        nota: 9.8
+        name: 'Lucky',
+        grade: 9.8
     },
 
     {
-        nome:'lola',
-        nota: 10
+        name: 'lola',
+        grade: 5
     },
 
     {
-        nome:'belinha',
-        nota: 2
-    } 
+        name: 'belinha',
+        grade: 2
+    }
 ]
 
-//função que calcula da merdia dos alunos
-function calculaMedia (alunos){
-    return (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
+function calculateAverage(students) {
+    let sum = 0
+
+    for (let i = 0; i < students.length; i++) {
+        sum = sum + students[i].grade
+    }
+
+    const average = sum / students.length
+
+    return average
 }
 
+function sendMenssage(average, group) {
 
-
-
-//se a média for maior que 7, parabenizar a turma
-if(media >= 7){
-   console.log(`A turma está de parabéns, a média da turma é igual ${media}.`);
-}else {
-    console.log(`A turma tem que estudar mais, a media é menor que 7.`);
+    if (average >= 7) {
+        console.log(`${group} average: ${average}. Congratulations!!`)
+    } else {
+        console.log(`${group} average: ${average}. Is not good.`)
+    }
 }
 
+function markAsFlunked(student) {
+    student.flunked = false
+
+    if (student.grade < 7) {
+        student.flunked = true
+    }
+}
+
+function sendFlunkedMessage(student) {
+
+    if (student.flunked) {
+        console.log(`The student ${student.name} is flunked`)
+    }
+}
+
+function studentsReprovados(students) {
+
+    for (let student of students) {
+        markAsFlunked(student)
+        sendFlunkedMessage(student)
+    }
+}
+
+const average1 = calculateAverage(classA)
+const average2 = calculateAverage(classB)
+
+sendMenssage(average1, 'class A')
+sendMenssage(average2, 'class B')
+
+studentsReprovados(classA)
+studentsReprovados(classB)
