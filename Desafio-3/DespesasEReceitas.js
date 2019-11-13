@@ -15,20 +15,23 @@ const users = [
     expenses: [450.2, 29.9]
   }
 ]
+
 function lista(users){
-  for (i = 0; i < users.length; i++){
+  for (let i = 0; i < users.length; i++){
     calculateBalance(users[i].revenue)
     //console.log(users[i].revenue);
   }
 }
 
 function calculateBalance(array){
-  console.log(array);
-
-
-  for(i =0; i< array.length; i++){
-    console.log(array[i]);
+  let soma = 0
+  for (let i = 0; i < array.length; i++){
+    soma += array[i]
   }
+  
+  
+  console.log(soma);
+
 
   
 }
