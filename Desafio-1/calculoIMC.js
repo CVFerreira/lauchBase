@@ -1,4 +1,4 @@
-user = {
+const user = {
     name: 'Caio',
     weight: 81,
     height: 1.72
