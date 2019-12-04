@@ -2,6 +2,7 @@ module.exports = [
   {
     image: '/burger.png',
     title: 'Triplo bacon burger',
+    index: 0,
     author: 'Jorge Relato',
     ingredients: [
       '3 kg de carne moída (escolha uma carne magra e macia)',
@@ -24,6 +25,7 @@ module.exports = [
   },
   {
     image: '/pizza.png',
+    index: 1,
     title: 'Pizza 4 estações',
     author: 'Fabiana Melo',
     ingredients: [
@@ -51,6 +53,7 @@ module.exports = [
   },
   {
     image: '/asinhas.png',
+    index: 2,
     title: 'Asinhas de frango ao barbecue',
     author: 'Vania Steroski',
     ingredients: [
@@ -68,6 +71,7 @@ module.exports = [
   },
   {
     image: '/lasanha.png',
+    index: 3,
     title: "Lasanha mac n' cheese",
     author: 'Juliano Vieira',
     ingredients: [
@@ -88,6 +92,7 @@ module.exports = [
   },
   {
     image: '/espaguete.png',
+    index: 4,
     title: 'Espaguete ao alho',
     author: 'Júlia Kinoto',
     ingredients: [
@@ -112,6 +117,7 @@ module.exports = [
   },
   {
     image: '/doce.png',
+    index: 5,
     title: 'Docinhos pão-do-céu',
     author: 'Ricardo Golvea',
     ingredients: [
