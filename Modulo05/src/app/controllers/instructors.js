@@ -23,7 +23,7 @@ module.exports ={
         }
 
         Instructor.create(req.body, function(instructor){
-            return res.redirect(`/instructors/${results.rows[0].id}`)
+            return res.redirect(`/instructors/${instructor.id}`)
 
         })
 
