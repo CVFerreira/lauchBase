@@ -21,7 +21,7 @@ nunjucks.configure("src/app/views", {
     autoescape: false,
     noCache: true
 })
-// configurando rota inicial do servidor
+
 
 // configuração de porta onde o servidro irá responder
 server.listen(5000, function(){
