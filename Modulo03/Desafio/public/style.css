@@ -6,23 +6,25 @@
     border: 0;
 }
 
-body .escopo{
-    width: 900px;
-    margin: 0 auto;
-    min-height: 80vh;
+body {
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    position: relative;
 }
 
-header div img{
-    padding: 30px;
-    vertical-align: middle;
-}
-header a{
-    font-family: Roboto-Regular;
+a {
+    font-weight: 400;
     font-size: 16px;
     color: #111111;
     text-decoration: none;
-    margin-left: 40px;
 }
+
+a:hover {
+    color: #444444
+}
+
+
+
 
 section{
     background: #FBDFDB;
@@ -44,15 +46,31 @@ h1{
     margin-bottom: 10px;
 }
 
-p{
-    opacity: 0.7;
-    font-family: Roboto-Regular;
-    font-size: 18px;
-    color: #000000;
+h2{
+    font-weight: bold;
+    font-size: 24px;
     line-height: 28px;
-    margin-left: 60px;
-    width: 316px;
-    height: 84px;    
+    color: #111111;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+p{
+    font-weight: 400;  
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.container{
+    max-width: 940px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    padding: 8px;
+    animation: fadeOm 0.5s ease-in-out;
+    position: relative;
 }
 
 section img{
@@ -62,12 +80,6 @@ section img{
     margin-left: 200px; 
 }
 
-h2{
-    font-family: Roboto-Bold;
-    font-size: 24px;
-    color: #111111;
-    margin-bottom: 20px;
-}
 .acessadas{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -198,4 +210,13 @@ iframe{
     height: 90%;
     position: absolute;
     top: 5%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
